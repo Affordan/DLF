@@ -11,6 +11,7 @@
 #include <iostream>
 #include <xtensor/xarray.hpp>
 #include <xtensor/xio.hpp>
+#include "../src/datatype.h"
 
 using namespace xt;
 
@@ -18,6 +19,10 @@ int main()
 {
     auto a = xt::xarray<float>({ 1,2,3 });
     std::cout << a << std::endl;
+
+    INT16 i;
+    std::cout << sizeof(i) << std::endl;
+   
 }
 
 
