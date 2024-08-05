@@ -1,8 +1,12 @@
 #ifndef NODE
 #define NODE
-#include <xtensor/xarray.hpp>
 #include "./datatype.h"
-using namespace xt;
+#include <set>
+//using namespace xt;
+//using namespace std;
+
+#define DATA_NODE_FLOAT32 __DATA_NODE__<FLOAT32>
+#define CAL_NODE_FLOAT32 __CAL_NODE__<FLOAT32>
 
 //template class or abstract class(all class that can't be instantiated directly)
 //are suggested surrounded by "__"
@@ -35,16 +39,18 @@ public:
 
 };
 
+//abstract class 
 template<typename T>
 class __CAL_NODE__
 {
 public:
 	std::vector<__DATA_NODE__<T>*> pre_node;
 	__DATA_NODE__<T>* back_node;
+	std::set<__DATA_NODE__<T>*> if_forward;
 
 	__CAL_NODE__();
-	void AddPreNode(__DATA_NODE__<T>* pre_node);
-	void SetBackNode(__DATA_NODE__<T>* back_node);
+	virtual void AddPreNode(__DATA_NODE__<T>* pre_node);		//virtual better?		//yes
+	virtual void SetBackNode(__DATA_NODE__<T>* back_node);
 
 	virtual void Forward() = 0;
 	virtual void Backward() = 0;
@@ -107,7 +113,7 @@ inline void __DATA_NODE__<T>::SetGrad(xt::xarray<T>& grad)
 template<typename T>
 inline void __DATA_NODE__<T>::SetGrad(const xt::xarray<T> grad)
 {
-	this->grad - grad;
+	this->grad = grad;
 }
 
 //__CAL_NODE__
@@ -119,13 +125,14 @@ inline __CAL_NODE__<T>::__CAL_NODE__():back_node(nullptr)
 template<typename T>
 inline void __CAL_NODE__<T>::AddPreNode(__DATA_NODE__<T>* pre_node)
 {
-	this->pre_node = prenode;
+	this->pre_node.push_back(pre_node);
+	
 }
 
 template<typename T>
 inline void __CAL_NODE__<T>::SetBackNode(__DATA_NODE__<T>* back_node)
 {
-	this->back_node = backnode;
+	this->back_node = back_node;
 }
 
 template<typename T>

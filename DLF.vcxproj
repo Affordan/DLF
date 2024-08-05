@@ -134,6 +134,8 @@
     <ClCompile Include="DLF.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\cal\arithmetic.hpp" />
+    <ClInclude Include="src\cal\elementary_function.hpp" />
     <ClInclude Include="src\datatype.h" />
     <ClInclude Include="src\node\node.hpp" />
   </ItemGroup>

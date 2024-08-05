@@ -39,3 +39,12 @@ calc node has 1~n inputs, and 1 output
 ![alt text](nodes.png)
 
 besides we declare forward and backward method in cal node.
+
+### 3. Arithmetics node
+when we use cal node,we need to achive forward algorithm and backward algorithm.
+- add node
+back_node = forward_node[0] + forward_node[1]
+forward: set back_node with the reslut of forward_node[0] + forward_node[1]
+backward: set the gradient of forward_node[0] and forward_node[1] with the gradient of back_node
+
+I need to add a schematic of forward and backward.

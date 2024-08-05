@@ -26,5 +26,11 @@
     <ClInclude Include="src\node\node.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\cal\arithmetic.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\cal\elementary_function.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
