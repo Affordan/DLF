@@ -31,12 +31,12 @@ more details see [here](https://www.cnblogs.com/devilmaycry812839668/p/16900550.
 - node.hpp support two nodes: **DATA_NODE** and **CALC_NODE**
 
 here is the data calculation flow chart:
-![alt text](autoDifferentiation.png)
+![alt text](images/autoDifferentiation.png)
 
 and more detailed info about node
 data node has 0~1 inputs, and n outputs
 calc node has 1~n inputs, and 1 output
-![alt text](nodes.png)
+![alt text](images/nodes.png)
 
 besides we declare forward and backward method in cal node.
 
