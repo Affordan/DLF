@@ -27,10 +27,15 @@ next turn to vs add them include file to the contain.
 
 more details see [here](https://www.cnblogs.com/devilmaycry812839668/p/16900550.html)
 
-* datatype.h support common data type
-* node.hpp support two nodes: __DATA_NODE__ and __CALC_NODE__
+- datatype.h support common data type
+- node.hpp support two nodes: **DATA_NODE** and **CALC_NODE**
 
-here is the draft I'll replace it by my own picture.
-![alt text](<Screenshot 2024-08-04 215047.png>)
+here is the data calculation flow chart:
+![alt text](autoDifferentiation.png)
 
+and more detailed info about node
+data node has 0~1 inputs, and n outputs
+calc node has 1~n inputs, and 1 output
+![alt text](nodes.png)
 
+besides we declare forward and backward method in cal node.
