@@ -1,5 +1,8 @@
 /*
-* 
+* Add
+* Sub
+* Mul
+* Div
 */
 #ifndef ARITHMETIC
 #define ARITHMETIC

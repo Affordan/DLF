@@ -50,3 +50,13 @@ when we use cal node,we need to achive forward algorithm and backward algorithm.
   backward: set the gradient of forward_node[0] and forward_node[1] with the gradient of back_node
 
 I need to add a schematic of forward and backward.
+
+### 4. Elementary function node
+
+we provide following elementary function node:
+
+- pow
+- ln
+- sin
+- cos
+- tan
