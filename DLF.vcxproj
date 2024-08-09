@@ -138,6 +138,9 @@
     <ClInclude Include="src\cal\elementary_function.hpp" />
     <ClInclude Include="src\datatype.h" />
     <ClInclude Include="src\node\node.hpp" />
+    <ClInclude Include="src\utils\computation_graph_flow.hpp" />
+    <ClInclude Include="src\utils\matmul.hpp" />
+    <ClInclude Include="src\utils\reshape.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

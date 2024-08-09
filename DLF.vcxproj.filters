@@ -32,5 +32,14 @@
     <ClInclude Include="src\cal\elementary_function.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\utils\computation_graph_flow.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\matmul.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\reshape.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
