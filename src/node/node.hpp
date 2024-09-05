@@ -26,6 +26,7 @@ public:
 	std::vector<__CAL_NODE<T>*> back_node;
 	xt::xarray<T> data;
 	xt::xarray<T> grad;
+	std::set<__DATA_NODE__<T>*> if_backward;
 
 	__DATA_NODE__();
 	__DATA_NODE__(xt::xarray<T>&data);

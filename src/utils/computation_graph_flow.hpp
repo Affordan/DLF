@@ -56,9 +56,9 @@ inline void __COMPUTATION_GRAPH_<T>::Forward()
 {
 	try
 	{
-		if (this->begin_node_list.empty())
+		if (this->begin_node_list.empty()||this->end_node_list.empty())
 		{
-			throw("WARNING: __COMPUTAION_GRAPH__::Forward() begin_node_list is empty! Please add at least one node!");
+			throw("WARNING: __COMPUTAION_GRAPH__::Forward() begin_node_list or end_node_list is empty! Please add at least one node!");
 		}
 		
 	}
